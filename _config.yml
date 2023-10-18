@@ -1,0 +1,31 @@
+title : Robert Jones
+description: 'Theoretical physicist'
+
+collections: 
+  front-page-cards:
+    output: false
+  publications:
+    output: true
+    permalink: /publications/:path
+  about:
+    output: true
+    permalink: /about/:path
+  gallery:
+    output: true
+    permalink: /gallery/:path
+
+defaults:
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: publication-landing-page
+
+markdown: kramdown
+highlighter: rouge
+plugins: [jekyll-paginate]
+logo: false
+paginate: 15
+baseurl: /
+plugins_dir: [jekyll-gist]
+permalink: /:year/:month/:title.html
